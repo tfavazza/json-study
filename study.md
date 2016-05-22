@@ -31,14 +31,21 @@ JSON only looks like an object. It is not an object.
 
 As it makes sense to you please write the following in JSON format:
 
--  Jason has many things...
-- A Cat named Mr.Kitty
-- Two roomates named Dave and Miller
-- A Love of the Red Sox, Patriots and Bruins
-- Has lived in two places recently: 123 Fake street, and 2 Muchinfo Road
+-   Jason has many things...
+-   A Cat named Mr.Kitty
+-   Two roomates named Dave and Miller
+-   A Love of the Red Sox, Patriots and Bruins
+-   Has lived in two places recently: 123 Fake street, and 2 Muchinfo Road
 
 ```json
-<!-- your answer here -->
+{
+  "Jason": {
+    "cat": "Mr. Kitty",
+    "Roommates": ["Dave", "Miller"],
+    "Loves": ["Red Sox", "Patriots", "Bruins"],
+    "Addresses":["123 Fake Street", "2 Muchinfo Road"]
+  }
+}
 ```
 
 ...I forgot, my roomate Dave has two goldfish, one named Bob (he's red) and the
@@ -46,7 +53,32 @@ other named Mr.MagicNibbles (yellow) and bites a bit. Please copy the JSON you
 already wrote and include the information about Dave's fish.
 
 ```json
-<!-- your answer here -->
+{
+  "Jason": {
+    "pets": {
+      "cat": "Mr. Kitty"
+    },
+    "Roommates": {
+      "Miller": {},
+      "Dave": {
+        "pets": {
+          "goldfish": {
+            "Bob": {
+              "color": "red"
+            },
+            "Mr. MagicNibbles": {
+              "color": "yellow",
+              "temperment": "bites sometimes"
+            }
+          }
+        }
+      }
+    },
+    "Loves": ["Red Sox", "Patriots", "Bruins"],
+    "Addresses":["123 Fake Street", "2 Muchinfo Road"]
+
+  }
+}
 ```
 
 ## JSON Methods
@@ -54,7 +86,7 @@ already wrote and include the information about Dave's fish.
 Using the JSON your wrote above, can you write a method on the JSON?
 
 ```json
-<!-- your answer here -->
+No, because JSON is not an object, and cannot have methods.
 ```
 
 ## JSON Comments
@@ -62,5 +94,5 @@ Using the JSON your wrote above, can you write a method on the JSON?
 Using the JSON your wrote above, can you write a comment in the JSON?
 
 ```json
-<!-- your answer here -->
+No, because JSON cannot have comments.
 ```
